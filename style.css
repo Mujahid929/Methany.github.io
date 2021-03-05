@@ -1,0 +1,369 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+.mu-cover {
+    height: 550px;
+    background-image: url('img/hero-bg.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: 75px;
+    overflow: hidden;
+}
+
+.mu-cover::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.5;
+    background-color: green;
+    z-index: 1;
+}
+
+.mu-cover .mu-cover-inner {
+    z-index: 2;
+}
+
+.mu-cover .mu-cover-inner button {
+    border-radius: 50px;
+    padding: 8px 40px;
+}
+
+.mu-cover .mu-cover-inner h1 {
+    /* font-size: 4rem; */
+    animation-name: cap-text;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes cap-text {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.mu-cover .mu-cover-inner h6 {
+    animation-name: p-text;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes p-text {
+    from {
+        position: relative;
+        left: -100%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+.mu-cover .mu-cover-inner button {
+    animation-name: bttn;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+@keyframes bttn {
+    from {
+        position: relative;
+        right: -100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+nav ul li {
+    margin-left: 13px;
+}
+
+nav .mu-brand {
+    font-size: 25px;
+}
+
+.mu-client .row img {
+    transition: all 0.5s ease;
+    filter: grayscale(100%);
+    width: 60px;
+}
+
+.mu-client .row img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.mu-section .mu-section-inner {
+    overflow: hidden;
+}
+
+.mu-section .left-move {
+    animation-name: ml;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes ml {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.mu-section .right-move {
+    animation-name: mk;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes mk {
+    from {
+        position: relative;
+        right: -100%;
+    }
+    to {
+        position: relative;
+        right: 0%;
+    }
+}
+
+.call-to-action {
+    background-image: url('img/cta-bg.jpg');
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.call-to-action::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.8;
+    background-color: black;
+    z-index: 1;
+}
+
+.call-to-action .action {
+    z-index: 2;
+    animation-name: call-to-action;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes call-to-action {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.call-to-action .action button {
+    border-radius: 50px;
+    padding: 5px 40px;
+}
+
+.services {
+    background-color: #F6F6F7;
+    overflow: hidden;
+}
+
+.services .services-left {
+    animation-name: service-left;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes service-left {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.services .services-right {
+    animation-name: service-right;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes service-right {
+    from {
+        position: relative;
+        right: -100%;
+    }
+    to {
+        position: relative;
+        right: 0%;
+    }
+}
+
+.services .ml .card:hover .fas {
+    color: white !important;
+}
+
+.services .ml .card:hover i {
+    background-color: green;
+}
+
+.services .ml .card:hover h4 {
+    color: green !important;
+}
+
+.portfolio {
+    overflow: hidden;
+}
+
+.portfolio .portfolio-left {
+    animation-name: port-left;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes port-left {
+    from {
+        position: relative;
+        left: -100%;
+        transform: scale(0.8);
+    }
+    to {
+        position: relative;
+        left: 0%;
+        transform: scale(1);
+    }
+}
+
+.portfolio .portfolio-right {
+    animation-name: port-right;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    overflow-x: hidden;
+}
+
+@keyframes port-right {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.team {
+    animation-name: team;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes team {
+    from {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.for-hovr {
+    position: relative;
+    overflow: hidden;
+}
+
+.for-hovr img {
+    transition: all 0.4s linear;
+}
+
+.for-hovr:hover img {
+    transform: scale(1.2);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.fas1:hover {
+    color: green !important;
+}
+
+.card-img-overlay {
+    transition: all 0.5s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+}
+
+.for-hovr:hover .card-img-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.fab:hover {
+    color: white !important;
+    background-color: green !important;
+    cursor: pointer;
+}
+
+.zoom_in .card img {
+    transition: all 0.4s linear;
+}
+
+.zoom_in .card img:hover {
+    transform: scale(1.1);
+}
